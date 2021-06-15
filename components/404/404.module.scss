@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fourOhFour {
+  font-size: 30rem;
+  font-weight: 900;
+  line-height: 500px;
+  .irisblue {
+    color: var(--c-irisblue);
+  }
+  .darkpink {
+    color: var(--c-darkpink);
+  }
+}
+
+.sentence {
+  font-size: 1rem;
+  color: var(--c-bunker);
+}

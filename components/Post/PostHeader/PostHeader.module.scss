@@ -1,0 +1,35 @@
+.wrapper {
+  margin: 3rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--c-lightgray);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 80%;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.revisedAt {
+  color: var(--c-silver);
+}
+
+.tags {
+  display: flex;
+
+  .tag {
+    border: 1px solid var(--c-irisblue);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    color: var(--c-irisblue);
+    font-size: 0.8rem;
+    margin: 0 0.2rem 0.2rem 0.2rem;
+  }
+}

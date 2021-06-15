@@ -1,20 +1,13 @@
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import styles from "../../components/Home.module.scss";
+import Post from "../../components/Post/Post";
 
-export default function BlogId({ blog }) {
+export default function PostId({ post }) {
   return (
     <>
       <Header />
-      <main className={styles.main}>
-        <h1 className={styles.title}>{blog.title}</h1>
-        <p className={styles.publishedAt}>{blog.publishedAt}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${blog.body}`,
-          }}
-          className={styles.post}
-        />
-      </main>
+      <Post post={post} />
+      <Footer />
     </>
   );
 }
@@ -25,12 +18,12 @@ export const getStaticPaths = async () => {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
   const data = await fetch(
-    "https://lonsan-salesforce.microcms.io/api/v1/blog",
+    "https://lonsan-salesforce.microcms.io/api/v1/post",
     key
   )
     .then((res) => res.json())
     .catch(() => null);
-  const paths = data.contents.map((content) => `/blog/${content.id}`);
+  const paths = data.contents.map((content) => `/post/${content.id}`);
   return { paths, fallback: false };
 };
 
@@ -41,14 +34,14 @@ export const getStaticProps = async (context) => {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
   const data = await fetch(
-    "https://lonsan-salesforce.microcms.io/api/v1/blog/" + id,
+    "https://lonsan-salesforce.microcms.io/api/v1/post/" + id,
     key
   )
     .then((res) => res.json())
     .catch(() => null);
   return {
     props: {
-      blog: data,
+      post: data,
     },
   };
 };

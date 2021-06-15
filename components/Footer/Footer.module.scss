@@ -1,0 +1,30 @@
+.container {
+  margin-top: 3rem;
+  width: 100%;
+  height: 6rem;
+  background-color: var(--c-cloudburst);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li {
+      margin: 0 2rem;
+      a {
+        color: var(--c-white);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: var(--c-white);
+    font-size: 0.7rem;
+  }
+}

@@ -1,19 +1,16 @@
 // pages/index.js
 import Link from "next/link";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import Home from "../components/Home/Home";
 
-export default function Home({ blog }) {
+export default function Index({ home }) {
   return (
-    <div>
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Header />
+      <Home home={home} />
+      <Footer />
+    </>
   );
 }
 
@@ -22,15 +19,15 @@ export const getStaticProps = async () => {
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
-  const data = await fetch(
-    "https://lonsan-salesforce.microcms.io/api/v1/blog",
+  const home = await fetch(
+    "https://lonsan-salesforce.microcms.io/api/v1/home",
     key
   )
     .then((res) => res.json())
     .catch(() => null);
   return {
     props: {
-      blog: data.contents,
+      home: home,
     },
   };
 };

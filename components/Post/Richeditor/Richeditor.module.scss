@@ -1,0 +1,65 @@
+.content {
+  // inline code 用
+  p > code {
+    border: 1px solid var(--c-silver);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    background-color: var(--c-whitesmoke);
+    color: var(--c-darkpink);
+  }
+
+  p > img {
+    max-width: 90%;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+    display: block;
+    margin: 0 auto;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  u {
+    background: linear-gradient(transparent 70%, rgba(239, 71, 111, 0.7) 30%);
+    text-decoration: none;
+  }
+  blockquote {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    padding: 10px 15px 10px 50px;
+    box-sizing: border-box;
+    font-style: italic;
+    border: solid 2px #464646;
+    color: #464646;
+  }
+
+  blockquote:before {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "“";
+    font-family: sans-serif;
+    color: #77c0c9;
+    font-size: 90px;
+    line-height: 1;
+  }
+
+  blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--c-irisblue);
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
