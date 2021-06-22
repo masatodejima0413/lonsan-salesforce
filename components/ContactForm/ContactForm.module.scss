@@ -1,0 +1,60 @@
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--c-lightgray);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  label {
+    color: var(--c-silver);
+    margin-bottom: 0.5rem;
+  }
+  input,
+  select,
+  textarea {
+    padding: 0 0.5rem;
+    background-color: var(--c-whisper);
+    border-radius: 0.3rem;
+    border: none;
+    font-size: 1.2rem;
+    &:focus {
+      outline: 1px var(--c-irisblue);
+      box-shadow: 0 0 0 1.5px var(--c-irisblue);
+    }
+  }
+  input[type="text"] {
+    height: 2.5rem;
+  }
+  select {
+    height: 2.5rem;
+  }
+
+  .button {
+    background-color: var(--c-irisblue);
+    color: var(--c-white);
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    margin: 2rem auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
