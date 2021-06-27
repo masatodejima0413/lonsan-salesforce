@@ -3,8 +3,8 @@ const nodemailer = require("nodemailer");
 
 export default async (req, res) => {
   try {
-    var data = req.body;
-    let transporter = nodemailer.createTransport({
+    const data = req.body;
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       port: 465,
       secure: true,
@@ -14,14 +14,22 @@ export default async (req, res) => {
       },
     });
 
-    let info = await transporter.sendMail({
-      from: process.env.MAIL_FROM,
-      to: "masatodejima+nodemailer@gmail.com",
-      subject: "お問い合わせ",
-      text: "本文",
+    const subject = "ねこめもブログからの問合せ";
+    const text =
+      `差出人: ${data.name} \n` +
+      `カテゴリ: ${data.category}\n` +
+      `本文: \n ${data.body} `;
+
+    const info = await transporter.sendMail({
+      from: data.mailfrom,
+      to: process.env.MAIL_TO,
+      subject,
+      text,
     });
     console.log("Message sent: %s", info.messageId);
+    res.json({});
   } catch (err) {
     console.log(err);
+    res.status(500).send();
   }
 };

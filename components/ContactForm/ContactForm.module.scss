@@ -13,6 +13,14 @@
   border-bottom: 1px solid var(--c-lightgray);
 }
 
+.errorMessage {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgba(239, 71, 111, 0.1);
+  border-radius: 0.3rem;
+  color: var(--c-darkpink);
+}
+
 .section {
   display: flex;
   flex-direction: column;
