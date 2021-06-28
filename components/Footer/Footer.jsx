@@ -21,7 +21,7 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="">
+          <Link href="/contact">
             <a>お問い合わせ</a>
           </Link>
         </li>

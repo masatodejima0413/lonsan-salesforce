@@ -95,7 +95,7 @@ const ContactForm = () => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option selected value="ブログ・記事に関するご質問・ご意見">
+            <option defaultValue value="ブログ・記事に関するご質問・ご意見">
               ブログ・記事に関するご質問・ご意見
             </option>
             <option value="お仕事のご依頼">お仕事のご依頼</option>
