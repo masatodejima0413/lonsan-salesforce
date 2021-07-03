@@ -40,16 +40,19 @@ const ContactForm = () => {
     }
 
     console.log("sendMail start");
-    const res = await fetch(`/api/send_mail`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name,
-        mailfrom: email,
-        category,
-        body,
-      }),
-    });
+    const res = await fetch(
+      `https://lonsan-salesforce.vercel.app/api/send_mail`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          mailfrom: email,
+          category,
+          body,
+        }),
+      }
+    );
     if (res.status === 200) {
       var json = await res.json();
       alert("メールが送信されました。\nお問い合わせ頂きありがとうございます。");
