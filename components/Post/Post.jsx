@@ -23,12 +23,11 @@ const Post = ({ post }) => {
       combinedToc = [...combinedToc, ...toc];
     }
   });
-  console.log(combinedToc);
 
   return (
     <div className={styles.container}>
       <PostHeader post={post} />
-      <TableOfContents combinedToc={combinedToc} />
+      {post.tableOfContents && <TableOfContents combinedToc={combinedToc} />}
       {post.body.map((customField, index) => {
         switch (customField.fieldId) {
           case "richeditor":

@@ -18,10 +18,10 @@ const Balloon = ({ balloonInfo }) => {
         <p>{balloonInfo.speaker}</p>
       </div>
       <div className={styles.balloon}>
-        {balloonInfo.comment.split("\n").map((str) => (
+        {balloonInfo.comment.split("\n").map((str, index) => (
           <>
             {str}
-            <br />
+            <br key={index} />
           </>
         ))}
       </div>
