@@ -39,7 +39,7 @@ const ContactForm = () => {
       return;
     }
 
-    console.log("send mail");
+    console.log("sendMail start");
     const res = await fetch(`/api/send_mail`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -58,6 +58,7 @@ const ContactForm = () => {
       setCategory("ブログ・記事に関するご質問・ご意見");
       setBody("");
       setErrorMessage("");
+      console.log("complete sendMail");
     } else {
       throw new Error(await res.text());
     }
