@@ -40,13 +40,7 @@ const ContactForm = () => {
     }
 
     console.log("send mail");
-    console.log({
-      name,
-      mailfrom: email,
-      category,
-      body,
-    });
-    const res = await fetch("http://localhost:3000/api/send_mail", {
+    const res = await fetch(`/api/send_mail`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -58,8 +52,12 @@ const ContactForm = () => {
     });
     if (res.status === 200) {
       var json = await res.json();
-      alert("Success, send mail");
-      console.log(json);
+      alert("メールが送信されました。\nお問い合わせ頂きありがとうございます。");
+      setName("");
+      setEmail("");
+      setCategory("ブログ・記事に関するご質問・ご意見");
+      setBody("");
+      setErrorMessage("");
     } else {
       throw new Error(await res.text());
     }
