@@ -28,11 +28,12 @@
     margin: 0;
     width: 100%;
     position: relative;
-    padding: 10px 15px 10px 50px;
+    padding: 1rem 1.5rem 1rem 4rem;
     box-sizing: border-box;
     font-style: italic;
-    border: solid 2px #464646;
+    border-radius: 0.3rem;
     color: #464646;
+    background-color: var(--c-whisper);
   }
 
   blockquote:before {
@@ -42,7 +43,7 @@
     left: 0;
     content: "“";
     font-family: sans-serif;
-    color: #77c0c9;
+    color: var(--c-carolinablue);
     font-size: 90px;
     line-height: 1;
   }
@@ -55,7 +56,7 @@
 
   a {
     text-decoration: underline;
-    color: var(--c-irisblue);
+    color: var(--c-carolinablue);
     opacity: 1;
     transition: all 0.2s ease-in-out;
     &:hover {

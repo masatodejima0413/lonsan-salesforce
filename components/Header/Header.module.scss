@@ -1,14 +1,19 @@
 .wrapper {
   width: 100%;
-  height: 4rem;
-  background-color: var(--c-irisblue);
+  height: 8rem;
+  background: rgba(39, 154, 241, 0.1);
+  // border-bottom: solid 2px rgba(39, 154, 241, 0.5);
   font-size: 1.5rem;
   font-weight: 900;
-  padding: 0 2rem;
+  padding: 0 3rem;
   display: flex;
   align-items: center;
 }
 
 .blogName {
   color: var(--c-white);
+}
+
+.logo {
+  width: 17rem;
 }

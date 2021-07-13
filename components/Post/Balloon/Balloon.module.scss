@@ -7,6 +7,7 @@
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
+      border: 2px solid var(--c-darkpink);
     }
     p {
       margin: 0;
@@ -62,6 +63,7 @@
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
+      border: 2px solid var(--c-carolinablue);
     }
     p {
       margin: 0;
@@ -79,7 +81,7 @@
     color: var(--c-bunker);
     font-size: 16px;
     background: #fff;
-    border: solid 3px var(--c-irisblue);
+    border: solid 3px var(--c-carolinablue);
     box-sizing: border-box;
 
     &::before {
@@ -100,7 +102,7 @@
       right: -30px;
       margin-top: -14px;
       border: 14px solid transparent;
-      border-left: 14px solid var(--c-irisblue);
+      border-left: 14px solid var(--c-carolinablue);
       z-index: 1;
     }
   }

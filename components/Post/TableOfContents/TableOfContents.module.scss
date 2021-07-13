@@ -9,7 +9,7 @@
 .label {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--c-irisblue);
+  color: var(--c-carolinablue);
 }
 
 .link {
@@ -29,7 +29,7 @@
   a {
     transition: all 0.2s ease-in-out;
     &:hover {
-      color: var(--c-irisblue);
+      color: var(--c-carolinablue);
       opacity: 0.7;
     }
   }

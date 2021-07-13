@@ -39,8 +39,8 @@
     border: none;
     font-size: 1.2rem;
     &:focus {
-      outline: 1px var(--c-irisblue);
-      box-shadow: 0 0 0 1.5px var(--c-irisblue);
+      outline: 1px var(--c-carolinablue);
+      box-shadow: 0 0 0 1.5px var(--c-carolinablue);
     }
   }
   input[type="text"] {
@@ -51,7 +51,7 @@
   }
 
   .button {
-    background-color: var(--c-irisblue);
+    background-color: var(--c-carolinablue);
     color: var(--c-white);
     font-size: 1.5rem;
     font-weight: 800;
