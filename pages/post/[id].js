@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
     .then((res) => res.json())
     .catch(() => null);
   const paths = data.contents.map((content) => `/post/${content.id}`);
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
